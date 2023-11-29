@@ -7,8 +7,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import SGDClassifier
 
-st.set_page_config(page_title="Sentiment Analysis App")
-
 # # Page Title and Sidebar Logo
 # st.set_page_config(
 #     page_title="Sentiment Analysis", page_icon="✨", layout="centered"
@@ -17,8 +15,6 @@ st.set_page_config(page_title="Sentiment Analysis App")
 # # Sidebar
 
 # st.sidebar.title("Sentiment Analysis App")
-
-st.title("Sentiment Analysis of Product Review")
 
 st.title("Sentiment Analysis of Product Review")
 
@@ -47,7 +43,6 @@ if st.button("Analyze Sentiment"):
             st.success("✅ This review is **Positive**.")
     else:
         st.warning("Please enter a product review.")
-
 st.write(
     """
     ## How it Works:
@@ -59,7 +54,6 @@ st.write(
     This sentiment analysis model was trained on a dataset of product reviews using a Support Vector Machine (SVM).
     """
 )
-
 st.markdown(
     """
     ---\n\n\n\n
