@@ -1,0 +1,6 @@
+streamlit
+time
+numpy
+joblib
+pandas
+skicit-learn
