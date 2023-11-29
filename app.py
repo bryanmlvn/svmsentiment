@@ -7,10 +7,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import SGDClassifier
 
- # Page Title and Sidebar Logo
- st.set_page_config(
-     page_title="Sentiment Analysis", page_icon="🔥", layout="centered"
- )
+st.set_page_config(
+ page_title="Sentiment Analysis", page_icon="🔥", layout="centered"
+)
 
 # # Sidebar
 
