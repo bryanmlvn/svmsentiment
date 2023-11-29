@@ -20,30 +20,33 @@ st.set_page_config(page_title="Sentiment Analysis App")
 
 st.title("Sentiment Analysis of Product Review")
 
-review = st.text_area("Enter your product review here:")
+st.title("Sentiment Analysis of Product Review")
 
-if review:
+# Change text_area to text_input
+review = st.text_area("Enter your product review here:", height=150)
 
-    vect_path = 'vectorizer_app.pkl'
-    vect = joblib.load(vect_path)
+# Add a button to trigger sentiment analysis
+if st.button("Analyze Sentiment"):
+    if review:
+        vect_path = 'vectorizer_app.pkl'
+        vect = joblib.load(vect_path)
 
-    text = np.array([review], dtype=object)
-    sample = vect.transform(text)
+        text = np.array([review], dtype=object)
+        sample = vect.transform(text)
 
-    model_path = 'model_app.pkl'
-    model = joblib.load(model_path)
+        model_path = 'model_app.pkl'
+        model = joblib.load(model_path)
 
-    with st.spinner("Analyzing..."):
-        time.sleep(2)
+        with st.spinner("Analyzing..."):
+            time.sleep(2)
+            predicted = model.predict(sample)
 
-        predicted = model.predict(sample)
-
-    if predicted == "__label__1":
-        st.error("❌ This review is **Negative**.")
+        if predicted == "__label__1":
+            st.error("❌ This review is **Negative**.")
+        else:
+            st.success("✅ This review is **Positive**.")
     else:
-        st.success("✅ This review is **Positive**.")
-else:
-    st.warning("Please enter a product review.")
+        st.warning("Please enter a product review.")
 
 st.write(
     """
