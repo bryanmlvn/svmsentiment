@@ -54,3 +54,9 @@ st.write(
     This sentiment analysis model was trained on a dataset of product reviews using a Support Vector Machine (SVM).
     """
 )
+st.markdown(
+    """
+    ---\n\n\n\n
+    Made by Bryan Melvin Jeffryson
+    """
+)
