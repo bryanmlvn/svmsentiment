@@ -8,7 +8,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import SGDClassifier
 
 st.set_page_config(
- page_title="Sentiment Analysis", page_icon="🔥", layout="centered"
+    page_title="Sentiment Analysis", page_icon="🔥", layout="centered"
 )
 
 # # Sidebar
