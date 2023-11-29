@@ -7,16 +7,28 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import SGDClassifier
 
+
+# Page Title and Sidebar Logo
 st.set_page_config(
     page_title="Sentiment Analysis", page_icon="🔥", layout="centered"
 )
 
 # # Sidebar
-
 # st.sidebar.title("Sentiment Analysis App")
+# st.sidebar.subheader("\n\n\n\nCreator Profile")
+
+# # Creator information
+# creator_name = "Bryan Melvin Jeffryson"
+# creator_study = "Bina University, Indonesia"
+# creator_image_path = "imageprofile.jpeg"
+
+# # Display creator profile
+# st.sidebar.image(creator_image_path, caption=creator_name, width=150)
+# st.sidebar.write(f"**Name:** {creator_name}")
+# st.sidebar.write(f"**Study at:** {creator_study}")
+
 
 st.title("Sentiment Analysis of Product Review")
-
 # Change text_area to text_input
 review = st.text_area("Enter your product review here:", height=150)
 
@@ -53,6 +65,7 @@ st.write(
     This sentiment analysis model was trained on a dataset of product reviews using a Support Vector Machine (SVM).
     """
 )
+
 st.markdown(
     """
     ---\n\n\n\n
