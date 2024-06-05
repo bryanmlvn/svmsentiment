@@ -61,7 +61,7 @@ st.write(
     - The system will predict whether the review is positive or negative based on a pre-trained model.
 
     ## About the Model:
-    This sentiment analysis model was trained on a dataset of product reviews using a SGD Classifier.
+    This sentiment analysis model was trained on a dataset of product reviews using a SVM.
     """
 )
 
